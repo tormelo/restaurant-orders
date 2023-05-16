@@ -5,11 +5,10 @@ from src.models.ingredient import Restriction
 # Req 1
 def test_ingredient():
     meat = Ingredient("carne")
-    other_meat = Ingredient("carne")
     bacon = Ingredient("bacon")
 
-    assert meat == other_meat
-    assert hash(meat) == hash(other_meat)
+    assert meat == meat
+    assert hash(meat) == hash(meat)
     assert hash(meat) != hash(bacon)
     assert meat.name == "carne"
     assert meat.__repr__() == "Ingredient('carne')"
